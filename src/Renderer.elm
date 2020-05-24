@@ -448,6 +448,7 @@ imageBlock image =
         , Html.figcaption
             [ css
                 [ Css.marginTop (rem 0.5)
+                , Css.width (pct 100)
                 , Css.alignSelf Css.flexStart
                 ]
             ]
