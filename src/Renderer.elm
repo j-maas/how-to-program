@@ -27,7 +27,7 @@ body content =
             [ Css.padding (rem 1)
             , Css.maxWidth (rem 48)
             , Css.margin Css.auto
-            , bodyFontStyle
+            , bodyFontFamily
             ]
         ]
         content
@@ -101,7 +101,8 @@ ccLicense =
                             , css
                                 ([ Css.width (em 0.9)
                                  , Css.height Css.auto
-                                 , Css.verticalAlign Css.middle
+                                 , Css.position Css.relative
+                                 , Css.bottom (em -0.1)
                                  ]
                                     ++ styles
                                 )
@@ -228,7 +229,7 @@ subheading contents =
 headingStyle : Css.Style
 headingStyle =
     Css.batch
-        [ Css.fontFamilies [ "Bitter", "serif" ]
+        [ headingFontFamily
         , Css.fontWeight Css.bold
         , Css.margin zero
         , Css.lineHeight (num 1.2)
@@ -251,9 +252,14 @@ paragraphStyle =
         ]
 
 
-bodyFontStyle : Css.Style
-bodyFontStyle =
-    Css.fontFamilies [ "Asap", "sans-serif" ]
+headingFontFamily : Css.Style
+headingFontFamily =
+    Css.fontFamilies [ "Bitter", "Georgia", "serif" ]
+
+
+bodyFontFamily : Css.Style
+bodyFontFamily =
+    Css.fontFamilies [ "Asap", "Arial", "sans-serif" ]
 
 
 paragraphFontStyle : Css.Style
@@ -356,7 +362,7 @@ renderReference reference =
         { text =
             List.map
                 (renderText
-                    [ Css.fontFamilies [ "Bitter", "serif" ]
+                    [ headingFontFamily
                     , Css.textTransform Css.uppercase
                     , Css.fontWeight Css.bold
                     , Css.fontSize (em 0.8)
@@ -386,7 +392,7 @@ codeFontStyle : Css.Style
 codeFontStyle =
     Css.batch
         [ Css.whiteSpace Css.preWrap
-        , Css.fontFamilies [ "Source Code Pro", "monospace" ]
+        , Css.fontFamilies [ "Source Code Pro", "Courier New", "monospace" ]
         ]
 
 
