@@ -79,7 +79,48 @@ renderDocument blocks =
                     imageBlock image
         )
         blocks
+        ++ [ ccLicense ]
         |> document
+
+
+ccLicense : Rendered msg
+ccLicense =
+    Html.footer
+        [ css
+            [ Css.marginTop (rem 4)
+            , backgroundTextStyle
+            ]
+        ]
+        [ Html.text "This article, written by Johannes Maas, is licensed under "
+        , viewLink
+            { text =
+                let
+                    icon path styles =
+                        Html.img
+                            [ Attributes.src (ImagePath.toString path)
+                            , css
+                                ([ Css.width (em 0.9)
+                                 , Css.height Css.auto
+                                 , Css.verticalAlign Css.middle
+                                 ]
+                                    ++ styles
+                                )
+                            ]
+                            []
+                in
+                [ Html.text "CC BY 4.0"
+                , Html.span [ css [ Css.whiteSpace Css.noWrap ] ]
+                    [ icon Pages.images.cc.cc [ Css.paddingLeft (em 0.2) ]
+                    , icon Pages.images.cc.by [ Css.paddingLeft (em 0.1) ]
+                    ]
+                ]
+            , url = "https://creativecommons.org/licenses/by/4.0/"
+
+            -- Break normally inside the link.
+            , styles = []
+            }
+        , Html.text "."
+        ]
 
 
 
@@ -458,14 +499,11 @@ imageBlock image =
                     [ Css.marginTop (rem 0.25)
                     , Css.fontStyle Css.normal
                     , Css.fontSize (em 0.9)
-                    , Css.opacity (num 0.5)
                     , Css.display Css.inlineBlock
                     , Css.maxWidth (pct 90)
                     , Css.textAlign Css.end
                     , Css.float Css.right
-                    , hover
-                        [ Css.opacity (num 1)
-                        ]
+                    , backgroundTextStyle
                     ]
                 ]
                 (List.map renderInline image.credit)
@@ -487,6 +525,16 @@ framedStyle =
         , Css.marginRight (rem -spacing)
         , Css.paddingLeft (rem spacing)
         , Css.paddingRight (rem spacing)
+        ]
+
+
+backgroundTextStyle : Css.Style
+backgroundTextStyle =
+    Css.batch
+        [ Css.opacity (num 0.5)
+        , hover
+            [ Css.opacity (num 1)
+            ]
         ]
 
 
