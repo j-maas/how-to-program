@@ -512,7 +512,10 @@ renderNote content =
         [ Html.input
             [ Attributes.type_ "checkbox"
             , Attributes.attribute "aria-label" "Toggle whether note is shown"
-            , css [ Css.verticalAlign Css.middle ]
+            , css
+                [ Css.verticalAlign Css.middle
+                , Css.margin zero
+                ]
             ]
             []
         , Html.small
