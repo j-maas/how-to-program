@@ -480,11 +480,17 @@ imageBlock image =
             , Css.alignItems Css.center
             ]
         ]
-        [ Html.img
+        [ let
+            dimensions =
+                ImagePath.dimensions image.src
+                    -- We know that all our images are internal and thus have dimensions.
+                    |> Maybe.withDefault { width = 0, height = 0 }
+          in
+          Html.img
             [ Attributes.src (ImagePath.toString image.src)
             , Attributes.alt image.alt
-            , Attributes.width image.width
-            , Attributes.height image.height
+            , Attributes.width dimensions.width
+            , Attributes.height dimensions.height
             , css
                 [ Css.maxWidth (pct 100)
                 , Css.maxHeight (vh 50)

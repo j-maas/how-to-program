@@ -1,10 +1,10 @@
 module Main exposing (main)
 
 import Document exposing (Document)
-import Documents.Markup
 import Head
 import Head.Seo as Seo
 import Html exposing (Html)
+import Markup
 import Metadata exposing (Metadata)
 import Pages exposing (images, pages)
 import Pages.Manifest as Manifest
@@ -38,7 +38,7 @@ main =
         , view = view
         , update = update
         , subscriptions = subscriptions
-        , documents = [ Documents.Markup.document ]
+        , documents = [ Markup.document ]
         , manifest = manifest
         , canonicalSiteUrl = canonicalSiteUrl
         , onPageChange = Nothing
