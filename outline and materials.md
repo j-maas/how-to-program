@@ -14,6 +14,7 @@
 ## Peripheral
 1. Console
 2. Git
+   - https://blog.upperlinecode.com/how-to-teach-git-commits-github-to-teenagers-a3f740b2f500
 
 ## Comfort
 1. Touch typing (Non-English: Use American keyboard layout)
