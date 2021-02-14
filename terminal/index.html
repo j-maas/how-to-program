@@ -76,6 +76,22 @@
     padding:1em;
 }
 
+._1d01b47c {
+    white-space:pre-wrap;
+    font-family:Source Code Pro, Courier New, monospace;
+    font-size:0.8em;
+    padding:0em 0.1em;
+    border:1px solid hsl(0, 0%, 75%);
+    border-radius:0.2em;
+    box-shadow:inset 0 -1px 0 hsl(0, 0%, 75%);
+    vertical-align:center;
+    white-space:pre;
+}
+
+._1d01b47c::after {
+    content:" ⇧";
+}
+
 ._1fc8d9b1 {
     margin-top:4rem;
     opacity:0.5;
@@ -98,6 +114,22 @@
     font-size:0.95em;
 }
 
+._2307402 {
+    white-space:pre-wrap;
+    font-family:Source Code Pro, Courier New, monospace;
+    font-size:0.8em;
+    padding:0em 0.1em;
+    border:1px solid hsl(0, 0%, 75%);
+    border-radius:0.2em;
+    box-shadow:inset 0 -1px 0 hsl(0, 0%, 75%);
+    vertical-align:center;
+    white-space:pre;
+}
+
+._2307402::before {
+    content:"↓ ";
+}
+
 ._2d95308c {
     width:0.9em;
     height:auto;
@@ -116,6 +148,22 @@
 
 ._3bebf8e7 {
     font-style:italic;
+}
+
+._3e80b8de {
+    white-space:pre-wrap;
+    font-family:Source Code Pro, Courier New, monospace;
+    font-size:0.8em;
+    padding:0em 0.1em;
+    border:1px solid hsl(0, 0%, 75%);
+    border-radius:0.2em;
+    box-shadow:inset 0 -1px 0 hsl(0, 0%, 75%);
+    vertical-align:center;
+    white-space:pre;
+}
+
+._3e80b8de::after {
+    content:" ↹";
 }
 
 ._449eb35f {
@@ -180,6 +228,22 @@
 ._9bac3a8e {
     line-height:1.35;
     margin:0;
+}
+
+._9c9bb867 {
+    white-space:pre-wrap;
+    font-family:Source Code Pro, Courier New, monospace;
+    font-size:0.8em;
+    padding:0em 0.1em;
+    border:1px solid hsl(0, 0%, 75%);
+    border-radius:0.2em;
+    box-shadow:inset 0 -1px 0 hsl(0, 0%, 75%);
+    vertical-align:center;
+    white-space:pre;
+}
+
+._9c9bb867::after {
+    content:" ↵";
 }
 
 ._a5ef576e {
@@ -256,6 +320,22 @@
     margin-top:1rem;
 }
 
+._ccff8fcb {
+    white-space:pre-wrap;
+    font-family:Source Code Pro, Courier New, monospace;
+    font-size:0.8em;
+    padding:0em 0.1em;
+    border:1px solid hsl(0, 0%, 75%);
+    border-radius:0.2em;
+    box-shadow:inset 0 -1px 0 hsl(0, 0%, 75%);
+    vertical-align:center;
+    white-space:pre;
+}
+
+._ccff8fcb::before {
+    content:"↑ ";
+}
+
 ._e5b1f628 {
     margin-top:0.25rem;
     font-style:normal;
@@ -308,4 +388,4 @@ Mandatory arguments to long options are mandatory for short options too.
 ... let's skip the rest ...</code></pre><p class="_9bac3a8e">The first thing it tells you is how you have to write it, its <code class="_21fc5432">usage</code>. First <code class="_21fc5432">ls</code>, then optionally multiple options, then optionally multiple files. The square brackets in <code class="_21fc5432">[OPTION]</code> indicate, that it’s an optional argument; you can also leave it out. The ellipsis, <code class="_21fc5432">...</code>, tells you that you can put multiple options after each other.</p><p class="_9bac3a8e">After the usage, it gives an overview. It also gives more information on the <code class="_21fc5432">FILE</code> that showed up in the <code class="_21fc5432">usage</code>. Sometimes there’s different ways you can call a program, for example if it has subcommands. All possibilities will be listed and explained in the following text.</p><p class="_9bac3a8e">Then comes a list of all possible options. Some options have short names (one dash, one letter, e.g. <code class="_21fc5432">-a</code>), some have long names (two dashes, more letters, e.g. <code class="_21fc5432">--all</code>), some have both and you can choose. So <code class="_21fc5432">ls -a</code> and <code class="_21fc5432">ls --all</code> do the same thing. There is no shorthand for <code class="_21fc5432">ls --author</code> and no long version of <code class="_21fc5432">ls -l</code>, though.</p><p class="_9bac3a8e">If the option needs more information, it takes a so-called “argument”. Sometimes, options that take no arguments are called flags. They are usually used to turn on something. For example, <code class="_21fc5432">--all</code> is a flag that turns on listing of normally hidden files that start with a <code class="_21fc5432">.</code>.</p><p class="_9bac3a8e">If you specify multiple options or files, you need to separate them with spaces. <code class="_21fc5432">ls --all -l first-file second-file</code> is good, but just like you the computer can’t read <code class="_21fc5432">ls --all-lfirst-filesecond-file</code>, it all looks like one big argument!</p><p class="_9bac3a8e">Of course there is an exception: You can mash short options together, e.g. <code class="_21fc5432">ls -al</code>. Not to be confused with <code class="_21fc5432">ls --all</code>, notice the dashes! So everything following a single dash are shorthand options. Their order does not matter, so <code class="_21fc5432">ls -al</code> and <code class="_21fc5432">ls -la</code> do the same thing.</p><h2 class="_66e7e16d">Rights: <code class="_21fc5432">sudo</code>, I’m begging you</h2><p class="_9bac3a8e">Obviously, not everyone should be allowed to read and copy your homework. Only you have the copyright! Similarly, access to files on a computer is typically restricted by rights. Some files are specially protected to prevent the wrong people from using them.</p><p class="_9bac3a8e">The downside is that the computer does not know if it’s really you bashing the keyboard. So you use a password that (presumably) only you know to log into your account.</p><p class="_9bac3a8e">Certain files shouldn’t be modified by accident, because they are used by the system. If something wrong happens to them, your computer might crash! But if you know what you do, you might need to use those files anyway; or you ask a program to do it.</p><p class="_9bac3a8e">Installing new software on your Ubuntu (that’s a Linux operating system flavor) happens with the <code class="_21fc5432">apt</code> program. But not everyone should be allowed to install software, only the owner of the computer, known as the “administrator”. To prove that you are the admin, you have to enter the password.</p><p class="_9bac3a8e">But logging out from your typical account, loggin in with the admin account, installing the software, and then switching accounts back again is really tedious. So Ubuntu has the sudo mechanism. It let’s you switch the accounts very quickly and just one command as the admin.</p><p class="_9bac3a8e">The first time you use <code class="_21fc5432">sudo apt install awesome-software</code>, it will ask for your password. If you entered it correctly, it will run <code class="_21fc5432">apt install awesome-software</code> with admin rights. Then the terminal is back under your account. It will even remember the password for a while, so running <code class="_21fc5432">sudo apt install other-thing</code> won’t bother you with the password again. But when you close the terminal and reopen it, you’ll need to enter the password again.</p><h2 class="_66e7e16d">Pipes: All for one, one for all</h2><p class="_9bac3a8e">You can make programs work together! What one programs prints out, you can feed into the text. Sounds like a bad idea? Actually it works pretty nicely in many cases.</p><p class="_9bac3a8e">As an example, we can print the contents of a file and then check whether a certain word is contained in the text. To print a file, use <code class="_21fc5432">cat</code>. That stands for con<em class="_3bebf8e7">cat</em>enate which means to add to the back of something, in this case concatenating the file content to the bottom of the terminal. <code class="_21fc5432">cat file</code> will print out the contents of <code class="_21fc5432">file</code>.</p><p class="_9bac3a8e"><code class="_21fc5432">grep</code> (meaning “<em class="_3bebf8e7">g</em>lobal/<em class="_3bebf8e7">r</em>egular <em class="_3bebf8e7">e</em>xpression/<em class="_3bebf8e7">p</em>rint”) will go through some text line by line and print out only the lines containing a pattern. If given the text</p><pre class="_19cd8d9f"><code class="_cb82d919">find me
 leave me alone
 please, find me, too</code></pre><p class="_9bac3a8e"><code class="_21fc5432">grep find</code> will output</p><pre class="_19cd8d9f"><code class="_cb82d919">find me
-please, find me, too</code></pre><p class="_9bac3a8e">You can plumb these two programs together. To take what <code class="_21fc5432">cat</code> outputs and input it into <code class="_21fc5432">grep</code>, use a pipe which is written as a vertical bar: <code class="_21fc5432">cat file | grep find</code>.</p><h2 class="_66e7e16d">Variations: Not all consoles are created equal</h2><p class="_9bac3a8e">There are a lot of different consoles out there. There’s bash, fish, zsh, cmd, PowerShell and more that I don’t even know of. And they all work slightly differently.</p><p class="_9bac3a8e">The biggest difference is between Unix shells (used in Linux and Mac OS) and Window’s variants. The programs and paths above are inspired by the bash, the Bourne Again Shell. On Windows, there is no <code class="_21fc5432">cp</code> program. But there are alternatives for copying files: in cmd it’s called <code class="_21fc5432">copy</code>, in PowerShell <code class="_21fc5432">Copy-Item</code>. Even paths are written differently. On Unix each folder ends with a forward slash, <code class="_21fc5432">/path/to/a/file</code>, while on Windows it’s a backward slash, <code class="_21fc5432">\path\to\a\file</code>.</p><p class="_9bac3a8e">But it’s not too bad. All consoles still provide you programs that you can call with options and flags.</p><h2 class="_66e7e16d">Tricks: Complete historic kill</h2><p class="_9bac3a8e">When you have to work with the terminal more often, you might benefit from some tricks that many consoles offer. Try them out to see whether they are supported in the terminal you use.</p><p class="_9bac3a8e">Most consoles will allow you to enter part of a file name and hit <kbd class="_a5ef576e">Tab&nbsp;↹</kbd> which triggers them to fill out the rest of the file name for you. If there are multiple options that start with what you have typed so far, it won’t pick one at random. Hit <kbd class="_a5ef576e">Tab&nbsp;↹</kbd> twice to show a list of available files. Continue to type out the file name you want until you can <kbd class="_a5ef576e">Tab&nbsp;↹</kbd> it to completion. Completion usually also works for programs and arguments.</p><p class="_9bac3a8e">You can also quickly re-enter a command you have already executed, because most consoles keep a history. To go back in time, simply move <kbd class="_a5ef576e">↑&nbsp;up</kbd>. You can also go <kbd class="_a5ef576e">↓&nbsp;down</kbd> if you went past the command you wanted. If what you are looking for is a while back, you can, in some shells, press <kbd class="_f243a8"><kbd class="_a5ef576e">Ctrl</kbd>+​<kbd class="_a5ef576e">R</kbd></kbd> and enter some part of the command. The history will be searched in reverse and the latest matching result will be shown. To select it, press <kbd class="_a5ef576e">Enter&nbsp;↵</kbd>, to cancel <kbd class="_f243a8"><kbd class="_a5ef576e">Ctrl</kbd>+​<kbd class="_a5ef576e">C</kbd></kbd>.</p><p class="_9bac3a8e">That last command, <kbd class="_f243a8"><kbd class="_a5ef576e">Ctrl</kbd>+​<kbd class="_a5ef576e">C</kbd></kbd>, kills the program. For any program, if it won’t stop, you can go back to normal by sending that command. Note that the first time you send <kbd class="_f243a8"><kbd class="_a5ef576e">Ctrl</kbd>+​<kbd class="_a5ef576e">C</kbd></kbd>, it will ask the program nicely to terminate. Most programs react immediately to this! If one misbehaves, sending <kbd class="_f243a8"><kbd class="_a5ef576e">Ctrl</kbd>+​<kbd class="_a5ef576e">C</kbd></kbd> again will make the system stop the program, which can corrupt whatever the program was busy doing, though most of the time it is better to stop such a program anyway. Unfortunately, my muscle memory kills programs when I actually want to copy some text. Copying happens in some shells with <kbd class="_f243a8"><kbd class="_a5ef576e">Ctrl</kbd>+​<kbd class="_a5ef576e">Shift&nbsp;⇧</kbd>+​<kbd class="_a5ef576e">C</kbd></kbd>, pasting correspondingly with <kbd class="_f243a8"><kbd class="_a5ef576e">Ctrl</kbd>+​<kbd class="_a5ef576e">Shift&nbsp;⇧</kbd>+​<kbd class="_a5ef576e">V</kbd></kbd>.</p><footer class="_1fc8d9b1">This article, written by Johannes Maas, is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" class="_772558e7">CC BY 4.0<span class="_b1deac8a"><img src="images/cc/cc.svg" width="14" height="14" class="_2d95308c"><img src="images/cc/by.svg" width="14" height="14" class="_7906c28a"></span></a>.</footer></article></main></div></body></html>
+please, find me, too</code></pre><p class="_9bac3a8e">You can plumb these two programs together. To take what <code class="_21fc5432">cat</code> outputs and input it into <code class="_21fc5432">grep</code>, use a pipe which is written as a vertical bar: <code class="_21fc5432">cat file | grep find</code>.</p><h2 class="_66e7e16d">Variations: Not all consoles are created equal</h2><p class="_9bac3a8e">There are a lot of different consoles out there. There’s bash, fish, zsh, cmd, PowerShell and more that I don’t even know of. And they all work slightly differently.</p><p class="_9bac3a8e">The biggest difference is between Unix shells (used in Linux and Mac OS) and Window’s variants. The programs and paths above are inspired by the bash, the Bourne Again Shell. On Windows, there is no <code class="_21fc5432">cp</code> program. But there are alternatives for copying files: in cmd it’s called <code class="_21fc5432">copy</code>, in PowerShell <code class="_21fc5432">Copy-Item</code>. Even paths are written differently. On Unix each folder ends with a forward slash, <code class="_21fc5432">/path/to/a/file</code>, while on Windows it’s a backward slash, <code class="_21fc5432">\path\to\a\file</code>.</p><p class="_9bac3a8e">But it’s not too bad. All consoles still provide you programs that you can call with options and flags.</p><h2 class="_66e7e16d">Tricks: Complete historic kill</h2><p class="_9bac3a8e">When you have to work with the terminal more often, you might benefit from some tricks that many consoles offer. Try them out to see whether they are supported in the terminal you use.</p><p class="_9bac3a8e">Most consoles will allow you to enter part of a file name and hit <kbd class="_3e80b8de">Tab</kbd> which triggers them to fill out the rest of the file name for you. If there are multiple options that start with what you have typed so far, it won’t pick one at random. Hit <kbd class="_3e80b8de">Tab</kbd> twice to show a list of available files. Continue to type out the file name you want until you can <kbd class="_3e80b8de">Tab</kbd> it to completion. Completion usually also works for programs and arguments.</p><p class="_9bac3a8e">You can also quickly re-enter a command you have already executed, because most consoles keep a history. To go back in time, simply move <kbd class="_ccff8fcb">up</kbd>. You can also go <kbd class="_2307402">down</kbd> if you went past the command you wanted. If what you are looking for is a while back, you can, in some shells, press <kbd class="_f243a8"><kbd class="_a5ef576e">Ctrl</kbd>+​<kbd class="_a5ef576e">R</kbd></kbd> and enter some part of the command. The history will be searched in reverse and the latest matching result will be shown. To select it, press <kbd class="_9c9bb867">Enter</kbd>, to cancel <kbd class="_f243a8"><kbd class="_a5ef576e">Ctrl</kbd>+​<kbd class="_a5ef576e">C</kbd></kbd>.</p><p class="_9bac3a8e">That last command, <kbd class="_f243a8"><kbd class="_a5ef576e">Ctrl</kbd>+​<kbd class="_a5ef576e">C</kbd></kbd>, kills the program. For any program, if it won’t stop, you can go back to normal by sending that command. Note that the first time you send <kbd class="_f243a8"><kbd class="_a5ef576e">Ctrl</kbd>+​<kbd class="_a5ef576e">C</kbd></kbd>, it will ask the program nicely to terminate. Most programs react immediately to this! If one misbehaves, sending <kbd class="_f243a8"><kbd class="_a5ef576e">Ctrl</kbd>+​<kbd class="_a5ef576e">C</kbd></kbd> again will make the system stop the program, which can corrupt whatever the program was busy doing, though most of the time it is better to stop such a program anyway. Unfortunately, my muscle memory kills programs when I actually want to copy some text. Copying happens in some shells with <kbd class="_f243a8"><kbd class="_a5ef576e">Ctrl</kbd>+​<kbd class="_1d01b47c">Shift</kbd>+​<kbd class="_a5ef576e">C</kbd></kbd>, pasting correspondingly with <kbd class="_f243a8"><kbd class="_a5ef576e">Ctrl</kbd>+​<kbd class="_1d01b47c">Shift</kbd>+​<kbd class="_a5ef576e">V</kbd></kbd>.</p><footer class="_1fc8d9b1">This article, written by Johannes Maas, is licensed under <a href="https://creativecommons.org/licenses/by/4.0/" class="_772558e7">CC BY 4.0<span class="_b1deac8a"><img src="images/cc/cc.svg" width="14" height="14" class="_2d95308c"><img src="images/cc/by.svg" width="14" height="14" class="_7906c28a"></span></a>.</footer></article></main></div></body></html>
