@@ -428,29 +428,53 @@ renderKey key =
         borderColor =
             Css.hsl 0 0 0.75
 
-        keyText =
+        ( keyText, decoration ) =
+            let
+                noDecoration =
+                    Css.batch []
+            in
             -- \u{00A0} is a non-breaking space to disallow breaking inside a key
             case key of
                 Document.Letter l ->
-                    String.fromChar l
+                    ( String.fromChar l, noDecoration )
 
                 Document.Ctrl ->
-                    "Ctrl"
+                    ( "Ctrl", noDecoration )
 
                 Document.Shift ->
-                    "Shift\u{00A0}⇧"
+                    ( "Shift"
+                    , Css.after
+                        [ Css.property "content" "\"\u{00A0}⇧\""
+                        ]
+                    )
 
                 Document.Enter ->
-                    "Enter\u{00A0}↵"
+                    ( "Enter"
+                    , Css.after
+                        [ Css.property "content" "\"\u{00A0}↵\""
+                        ]
+                    )
 
                 Document.Tab ->
-                    "Tab\u{00A0}↹"
+                    ( "Tab"
+                    , Css.after
+                        [ Css.property "content" "\"\u{00A0}↹\""
+                        ]
+                    )
 
                 Document.Up ->
-                    "↑\u{00A0}up"
+                    ( "up"
+                    , Css.before
+                        [ Css.property "content" "\"↑\u{00A0}\""
+                        ]
+                    )
 
                 Document.Down ->
-                    "↓\u{00A0}down"
+                    ( "down"
+                    , Css.before
+                        [ Css.property "content" "\"↓\u{00A0}\""
+                        ]
+                    )
     in
     Html.kbd
         [ css
@@ -462,6 +486,7 @@ renderKey key =
             , Css.boxShadow5 Css.inset zero (px -1) zero borderColor
             , Css.verticalAlign Css.center
             , Css.whiteSpace Css.pre
+            , decoration
             ]
         ]
         [ Html.text keyText ]
